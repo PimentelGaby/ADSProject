@@ -3,8 +3,7 @@ using static ADSProyect.Interfaces.IMateria;
 
 namespace ADSProyect.Interfaces
 {
-    public interface IMateria
-    {
+   
         public interface IMateria
         {
             public int AgregarMateria(Materia materia);
@@ -13,5 +12,5 @@ namespace ADSProyect.Interfaces
             public List<Materia> ObtenerTodasLasMaterias();
             public Materia ObtenerMateriaPorId(int idMateria);
         }
-    }
+    
 }

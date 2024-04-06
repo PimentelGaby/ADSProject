@@ -1,31 +1,32 @@
 ﻿using ADSProyect.Interfaces;
 using ADSProyect.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.RegularExpressions;
 
 namespace ADSProyect.Controllers
 {
-    [Route("api/materias/")]
-    public class MateriasController : ControllerBase
+    [Route("api/grupos/")]
+    public class GrupoController : ControllerBase
     {
-        private readonly IMateria materia;
+        private readonly IGrupo grupo;
         private const string COD_EXITO = "000000";
         private const string COD_ERROR = "999999";
         private string pCodRespuesta;
         private string pMensajeUsuario;
         private string pMensajeTecnico;
 
-        public MateriasController(IMateria materia)
+        public GrupoController(IGrupo grupo)
         {
-            this.materia = materia;
+            this.grupo = grupo;
         }
 
-        [HttpPost("agregarMateria")]
+        [HttpPost("agregarGrupo")]
 
-        public ActionResult<string> AgregarMateria([FromBody] Materia materia)
+        public ActionResult<string> AgregarGrupo([FromBody] Grupo grupo)
         {
             try
             {
-                int contador = this.materia.AgregarMateria(materia);
+                int contador = this.grupo.AgregarGrupo(grupo);
 
                 if (contador > 0)
                 {
@@ -48,13 +49,13 @@ namespace ADSProyect.Controllers
             }
         }
 
-        [HttpPost("actualizarMateria/{idMateria}")]
+        [HttpPost("actualizarGrupo/{idGrupo}")]
 
-        public ActionResult<string> ActualizarMateria(int idMateria, [FromBody] Materia materia)
+        public ActionResult<string> ActualizarGrupo(int idGrupo, [FromBody] Grupo grupo)
         {
             try
             {
-                int contador = this.materia.ActualizarMateria(idMateria, materia);
+                int contador = this.grupo.ActualizarGrupo(idGrupo, grupo);
 
                 if (contador > 0)
                 {
@@ -78,13 +79,13 @@ namespace ADSProyect.Controllers
 
         }
 
-        [HttpDelete("eliminarMateria/{idMateria}")]
+        [HttpDelete("eliminarGrupo/{idGrupo}")]
 
-        public ActionResult<string> EliminarMateria(int idMateria)
+        public ActionResult<string> EliminarGrupo(int idGrupo)
         {
             try
             {
-                bool eliminado = this.materia.EliminarMateria(idMateria);
+                bool eliminado = this.grupo.EliminarGrupo(idGrupo);
                 if (eliminado)
                 {
                     pCodRespuesta = COD_EXITO;
@@ -105,16 +106,16 @@ namespace ADSProyect.Controllers
             }
         }
 
-        [HttpGet("obtenerMateriaPorID/{idMateria}")]
-        public ActionResult<Materia> ObtenerMateriaPorID(int idMateria)
+        [HttpGet("obtenerGrupoPorID/{idGrupo}")]
+        public ActionResult<Grupo> ObtenerGrupoPorID(int idGrupo)
         {
             try
             {
-                Materia materia = this.materia.ObtenerMateriaPorId(idMateria);
+                Grupo grupo = this.grupo.ObtenerGrupoPorId(idGrupo);
 
-                if (materia != null)
+                if (grupo != null)
                 {
-                    return Ok(materia);
+                    return Ok(grupo);
                 }
                 else
                 {
@@ -131,15 +132,15 @@ namespace ADSProyect.Controllers
             }
         }
 
-        [HttpGet("obtenerMaterias")]
+        [HttpGet("obtenerGrupos")]
 
-        public ActionResult<List<Materia>> ObtenerMaterias()
+        public ActionResult<List<Grupo>> ObtenerGrupos()
         {
             try
             {
-                List<Materia> lstMateria = this.materia.ObtenerTodasLasMaterias();
+                List<Grupo> lstGrupo = this.grupo.ObtenerTodosLosGrupos();
 
-                return Ok(lstMateria);
+                return Ok(lstGrupo);
             }
             catch (Exception)
             {
