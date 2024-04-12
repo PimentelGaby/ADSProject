@@ -25,6 +25,10 @@ namespace ADSProyect.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
                 int contador = this.profesor.AgregarProfesor(profesor);
 
                 if (contador > 0)
@@ -111,18 +115,17 @@ namespace ADSProyect.Controllers
         {
             try
             {
-                Carrera carrera = this.profesor.ObtenerProfesorPorId(idProfesor);
+                Profesor profesor = this.profesor.ObtenerProfesorPorId(idProfesor);
 
-                if (profesor != null)
+                if (profesor == null)
                 {
                     return Ok(profesor);
                 }
                 else
                 {
                     pCodRespuesta = COD_ERROR;
-                    pMensajeUsuario = "No se encontraron registros";
+                    pMensajeUsuario = "No se encontro el registro";
                     pMensajeTecnico = pCodRespuesta + " || " + pMensajeUsuario;
-
                     return NotFound(new { pCodRespuesta, pMensajeUsuario, pMensajeTecnico });
                 }
             }

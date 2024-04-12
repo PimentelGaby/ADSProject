@@ -79,7 +79,8 @@ namespace ADSProyect.Repositories
             }
         }
 
-        public List<Profesor> ObtenerTodasLosProfesores()
+     
+        public List<Profesor> ObtenerTodosLosProfesores()
         {
             try
             {
@@ -89,16 +90,6 @@ namespace ADSProyect.Repositories
             {
                 throw;
             }
-        }
-
-        public List<Profesor> ObtenerTodosLosProfesores()
-        {
-            throw new NotImplementedException();
-        }
-
-        Carrera IProfesor.ObtenerProfesorPorId(int idProfesor)
-        {
-            throw new NotImplementedException();
         }
     }
 }
