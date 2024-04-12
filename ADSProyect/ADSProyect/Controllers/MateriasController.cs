@@ -1,5 +1,6 @@
 ﻿using ADSProyect.Interfaces;
 using ADSProyect.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ADSProyect.Controllers
@@ -25,6 +26,10 @@ namespace ADSProyect.Controllers
         {
             try
             {
+                 if(!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
                 int contador = this.materia.AgregarMateria(materia);
 
                 if (contador > 0)
@@ -111,7 +116,6 @@ namespace ADSProyect.Controllers
             try
             {
                 Materia materia = this.materia.ObtenerMateriaPorId(idMateria);
-
                 if (materia != null)
                 {
                     return Ok(materia);
@@ -119,9 +123,8 @@ namespace ADSProyect.Controllers
                 else
                 {
                     pCodRespuesta = COD_ERROR;
-                    pMensajeUsuario = "No se encontraron registros";
+                    pMensajeUsuario = "No se encontro el registro";
                     pMensajeTecnico = pCodRespuesta + " || " + pMensajeUsuario;
-
                     return NotFound(new { pCodRespuesta, pMensajeUsuario, pMensajeTecnico });
                 }
             }
@@ -137,9 +140,8 @@ namespace ADSProyect.Controllers
         {
             try
             {
-                List<Materia> lstMateria = this.materia.ObtenerTodasLasMaterias();
-
-                return Ok(lstMateria);
+                List<Materia> lstMaterias = this.materia.ObtenerTodasLasMaterias();
+                return Ok(lstMaterias);
             }
             catch (Exception)
             {

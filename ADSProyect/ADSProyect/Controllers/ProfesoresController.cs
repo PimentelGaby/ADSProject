@@ -1,5 +1,6 @@
 ﻿using ADSProyect.Interfaces;
 using ADSProyect.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ADSProyect.Controllers
