@@ -1,9 +1,14 @@
 using ADSProyect.Interfaces;
 using ADSProyect.Models;
 using ADSProyect.Repositories;
+using Microsoft.EntityFrameworkCore;
+using ADSProyect.DB;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+//Configurando DBContext
+builder.Services.AddDbContext<ApplicationDbContext>(opciones => opciones.UseSqlServer("name=DefaultConnection"));
 // Add services to the container.
 
 builder.Services.AddControllers();
