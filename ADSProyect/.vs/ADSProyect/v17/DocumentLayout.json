@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\gabri\\Documents\\GitHub\\ADSProyect\\ADSProyect\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0997210C-4F97-4ECE-924C-06679F0A6525}|ADSProyect\\ADSProyect.csproj|c:\\users\\gabri\\documents\\github\\adsproyect\\adsproyect\\adsproyect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0997210C-4F97-4ECE-924C-06679F0A6525}|ADSProyect\\ADSProyect.csproj|solutionrelative:adsproyect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0997210C-4F97-4ECE-924C-06679F0A6525}|ADSProyect\\ADSProyect.csproj|c:\\users\\gabri\\documents\\github\\adsproyect\\adsproyect\\adsproyect\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0997210C-4F97-4ECE-924C-06679F0A6525}|ADSProyect\\ADSProyect.csproj|solutionrelative:adsproyect\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0997210C-4F97-4ECE-924C-06679F0A6525}|ADSProyect\\ADSProyect.csproj|c:\\users\\gabri\\documents\\github\\adsproyect\\adsproyect\\adsproyect\\repositories\\profesorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0997210C-4F97-4ECE-924C-06679F0A6525}|ADSProyect\\ADSProyect.csproj|solutionrelative:adsproyect\\repositories\\profesorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,24 +26,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\ADSProyect\\ADSProyect\\ADSProyect\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ADSProyect\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\ADSProyect\\ADSProyect\\ADSProyect\\appsettings.Development.json",
+              "RelativeToolTip": "ADSProyect\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-18T02:26:36.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\ADSProyect\\ADSProyect\\ADSProyect\\Program.cs",
+              "RelativeDocumentMoniker": "ADSProyect\\Program.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\ADSProyect\\ADSProyect\\ADSProyect\\Program.cs",
+              "RelativeToolTip": "ADSProyect\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T02:18:34.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ProfesorRepository.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\ADSProyect\\ADSProyect\\ADSProyect\\Repositories\\ProfesorRepository.cs",
               "RelativeDocumentMoniker": "ADSProyect\\Repositories\\ProfesorRepository.cs",
               "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\ADSProyect\\ADSProyect\\ADSProyect\\Repositories\\ProfesorRepository.cs",
               "RelativeToolTip": "ADSProyect\\Repositories\\ProfesorRepository.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAkwGMAAAA1AAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAgwGMAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T21:31:25.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MateriaRepository.cs",
               "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\ADSProyect\\ADSProyect\\ADSProyect\\Repositories\\MateriaRepository.cs",
               "RelativeDocumentMoniker": "ADSProyect\\Repositories\\MateriaRepository.cs",
@@ -43,8 +77,7 @@
               "RelativeToolTip": "ADSProyect\\Repositories\\MateriaRepository.cs",
               "ViewState": "AQIAAFkAAAAAAAAAAAAswGkAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T21:20:07.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T21:20:07.352Z"
             }
           ]
         }
